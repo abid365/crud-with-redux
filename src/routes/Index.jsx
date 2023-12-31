@@ -8,6 +8,7 @@ import NavBar from "../Layouts/NavBar";
 import BookView from "../Features/Books/BookView";
 import AddBook from "../Features/Books/AddBook";
 import Footer from "../Layouts/Footer";
+import EditBook from "../Features/Books/EditBook";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
           <Route path="/" element={<Home />} />
           <Route path="/show-books" element={<BookView />} />
           <Route path="/add-book" element={<AddBook />} />
+          <Route path="/edit-book" element={<EditBook />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </div>

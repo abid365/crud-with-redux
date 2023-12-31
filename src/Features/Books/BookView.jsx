@@ -1,13 +1,16 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import TableRow from "../../Components/TableRow";
+import { useDispatch } from "react-redux";
+import { deleteBook } from "./BookSlice";
 
 const BookView = () => {
   const books = useSelector((state) => state.booksReducer.books);
-  console.log(books);
+  const dispatch = useDispatch();
 
   const handleDelete = (paramId) => {
-    console.log("Delete by id: ", paramId);
+    // console.log("Delete by id: ", paramId);
+    dispatch(deleteBook(paramId));
   };
 
   const handleEdit = (paramsId) => {
@@ -24,7 +27,7 @@ const BookView = () => {
             {/* head */}
             <thead>
               <tr>
-                <th>ID</th>
+                {/* <th>ID</th> */}
                 <th>Title</th>
                 <th>Author</th>
                 <th>Actions</th>
