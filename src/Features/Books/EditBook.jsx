@@ -25,9 +25,9 @@ const EditBook = () => {
   };
   return (
     <div>
-      <h1 className="text-center">Edit Book</h1>
-      <div className="flex justify-between items-center mx-auto">
-        <form onSubmit={handleSubmit} className="w-[40%] border border-red-400">
+      <h1 className="text-center font-bold">Edit Book</h1>
+      <div className="flex justify-center items-center mx-auto">
+        <form onSubmit={handleSubmit} className="w-[45%]">
           <label className="form-control">
             <div className="label">
               <span className="label-text">Book title</span>
@@ -54,11 +54,13 @@ const EditBook = () => {
               className="input input-bordered w-full"
             />
           </label>
-          <input
-            className="btn btn-md btn-outline w-[70%] mt-5"
-            type="submit"
-            value="Edit Book"
-          />
+          <div className="flex justify-center items-center">
+            <input
+              className="btn btn-md btn-outline w-[70%] mt-5 font-bold bg-indigo-200"
+              type="submit"
+              value="Edit Book"
+            />
+          </div>
         </form>
       </div>
     </div>

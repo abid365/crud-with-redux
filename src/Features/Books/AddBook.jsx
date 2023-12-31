@@ -23,8 +23,8 @@ const AddBook = () => {
   return (
     <div>
       <h1 className="text-center font-bold">Add Book</h1>
-      <div className="flex justify-between items-center mx-auto">
-        <form onSubmit={handleSubmit} className="w-[40%] border border-red-400">
+      <div className="flex justify-center items-center">
+        <form onSubmit={handleSubmit} className="w-[45%]">
           <label className="form-control">
             <div className="label">
               <span className="label-text">Book title</span>
@@ -49,11 +49,13 @@ const AddBook = () => {
               className="input input-bordered w-full"
             />
           </label>
-          <input
-            className="btn btn-md btn-outline w-[70%] mt-5"
-            type="submit"
-            value="Submit"
-          />
+          <div className="flex justify-center items-center">
+            <input
+              className="btn btn-md btn-outline w-[70%] mt-5 bg-yellow-200 font-bold"
+              type="submit"
+              value="Submit"
+            />
+          </div>
         </form>
       </div>
     </div>
